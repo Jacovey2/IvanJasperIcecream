@@ -13,7 +13,7 @@ public class Cone {
 		x=xPos;
 		y=yPos;
 		length=Length;
-		Type="Cone";
+		type="Cone";
 		Polygon p= new Polygon();
 		p.addPoint(xPos, yPos);
 		p.addPoint(xPos+100, yPos);
