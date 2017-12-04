@@ -28,7 +28,6 @@ public class GUI extends Applet{
 			
 			System.out.println("What Topping?");
 			toppings[i] = scan.next();
-			
 		}
 	}
 	
