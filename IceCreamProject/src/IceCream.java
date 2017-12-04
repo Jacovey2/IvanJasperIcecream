@@ -8,14 +8,14 @@ public class IceCream {
 	private double price;
 	public Scoop[] Scoops;
 
-	public IceCream(int xPos, int yPos, String[] types, Graphics g) {
+	public IceCream(int xPos, int yPos, String receptical, String[] types, Graphics g) {
 		x = xPos;
 		y = yPos;
 		Scoops = new Scoop[types.length];
 
 		for (int i = 0; i < types.length; i++) {
 			if (types[i].equals("Vanilla")) 
-				Scoops[i] = new Scoop(x, y + i * 100, g);
+				Scoops[i] = new Scoop(x, y - i * 100, g);
 			if (types[i].equals("ChocolateChip")) 
 				Scoops[i] = new ChocolateChip(x, y + i * 100, g);
 			if (types[i].equals("Mango")) 
