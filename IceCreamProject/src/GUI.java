@@ -5,20 +5,25 @@ import java.util.Scanner;
 public class GUI extends Applet{
 	public double subTotal;
 	public int length;
+	public String[] types;
 	
 	public void init() {
-		setSize(new Dimension(500,500));
+		Scanner scan= new Scanner(System.in);
+		setSize(new Dimension(1000,900));
+		
+		//taking in values to make ice cream
+		System.out.println("How many scoops?");
+		length = scan.nextInt();
+		types= new String[length];
+		for (int i=0; i<length; i++) {
+			System.out.println("What flavor?");
+			types[i] = scan.next();
+		}
 	}
 	
 	public void paint(Graphics g) {
-		Scanner scan= new Scanner(System.in);
-		Cone c= new Cone(200,500,0,g);
+		IceCream c= new IceCream(200,500,types,g);
 		
-		//Get how many scoops
-		length = scan.nextInt();
-		for(int i=0; i<length; i++) {
-			
-		}
 	}
 	
 }
