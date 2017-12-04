@@ -14,21 +14,22 @@ public class IceCream {
 		Scoops = new Scoop[types.length];
 
 		for (int i = 0; i < types.length; i++) {
-			if (types[i].equals("Vanilla")) 
+			if (types[i].equals("Vanilla") || types[i].equals("va"))
 				Scoops[i] = new Scoop(x, y - i * 100, g);
-			if (types[i].equals("ChocolateChip")) 
+			if (types[i].equals("ChocolateChip") || types[i].equals("cc"))
 				Scoops[i] = new ChocolateChip(x, y + i * 100, g);
-			if (types[i].equals("Mango")) 
+			if (types[i].equals("Mango") || types[i].equals("ma"))
 				Scoops[i] = new Mango(x, y - i * 100, g);
-			if (types[i].equals("Strawberry")) 
+			if (types[i].equals("Strawberry") || types[i].equals("st"))
 				Scoops[i] = new Strawberry(x, y - i * 100, g);
-			if (types[i].equals("CookiesNCream")) 
+			if (types[i].equals("CookiesNCream") || types[i].equals("cnc"))
 				Scoops[i] = new CookiesNCream(x, y - i * 100, g);
-			if (types[i].equals("RockyRoad")) 
+			if (types[i].equals("RockyRoad") || types[i].equals("rr"))
 				Scoops[i] = new RockyRoad(x, y - i * 100, g);
 			price += Scoops[i].price;
 		}
 	}
+
 	public void drawCone(Graphics g) {
 		Polygon p = new Polygon();
 		p.addPoint(x, y);
@@ -38,6 +39,7 @@ public class IceCream {
 		g.fillPolygon(p);
 		g.setColor(Color.black);
 	}
+
 	public void drawCup(Graphics g) {
 		Polygon p = new Polygon();
 		p.addPoint(x, y);
