@@ -8,24 +8,24 @@ public class IceCream {
 	private double price;
 	public Scoop[] Scoops;
 
-	public IceCream(int xPos, int yPos, String receptical, String[] types, Graphics g) {
+	public IceCream(int xPos, int yPos, String receptical, String[] types, String[] toppings, Graphics g) {
 		x = xPos;
 		y = yPos;
 		Scoops = new Scoop[types.length];
 
 		for (int i = 0; i < types.length; i++) {
 			if (types[i].equals("Vanilla") || types[i].equals("va"))
-				Scoops[i] = new Scoop(x, y - (i + 1) * 80, g);
+				Scoops[i] = new Scoop(x, y - (i + 1) * 80,toppings[i], g);
 			if (types[i].equals("ChocolateChip") || types[i].equals("cc"))
-				Scoops[i] = new ChocolateChip(x, y - (i + 1) * 80, g);
+				Scoops[i] = new ChocolateChip(x, y - (i + 1) * 80,toppings[i], g);
 			if (types[i].equals("Mango") || types[i].equals("ma"))
-				Scoops[i] = new Mango(x, y - (i + 1) * 80, g);
+				Scoops[i] = new Mango(x, y - (i + 1) * 80,toppings[i], g);
 			if (types[i].equals("Strawberry") || types[i].equals("st"))
-				Scoops[i] = new Strawberry(x, y - (i + 1) * 80, g);
+				Scoops[i] = new Strawberry(x, y - (i + 1) * 80,toppings[i], g);
 			if (types[i].equals("CookiesNCream") || types[i].equals("cnc"))
-				Scoops[i] = new CookiesNCream(x, y - (i + 1) * 80, g);
+				Scoops[i] = new CookiesNCream(x, y - (i + 1) * 80,toppings[i], g);
 			if (types[i].equals("RockyRoad") || types[i].equals("rr"))
-				Scoops[i] = new RockyRoad(x, y - (i + 1) * 100, g);
+				Scoops[i] = new RockyRoad(x, y - (i + 1) * 80,toppings[i], g);
 			price += Scoops[i].price;
 		}
 		if (receptical.equals("Cup"))

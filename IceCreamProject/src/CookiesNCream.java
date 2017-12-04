@@ -6,5 +6,9 @@ public class CookiesNCream extends Scoop{
 		super(xPos, yPos, g);
 		// TODO Auto-generated constructor stub
 	}
+	public CookiesNCream(int xPos, int yPos, String topping, Graphics g) {
+		super(xPos, yPos, topping, g);
+		// TODO Auto-generated constructor stub
+	}
 
 }

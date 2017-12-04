@@ -32,7 +32,7 @@ public class GUI extends Applet{
 	}
 	
 	public void paint(Graphics g) {
-		IceCream c= new IceCream(200,500,receptical,types,g);
+		IceCream c= new IceCream(200,500,receptical,types, toppings,g);
 		
 	}
 	
