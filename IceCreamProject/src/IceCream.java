@@ -42,7 +42,8 @@ public class IceCream {
 		Polygon p = new Polygon();
 		p.addPoint(x, y);
 		p.addPoint(x + 100, y);
-		p.addPoint(x + 50, y + 150);
+		p.addPoint(x + 25, y + 100);
+		p.addPoint(x + 75, y + 100);
 		g.setColor(new Color(90, 50, 0));
 		g.fillPolygon(p);
 		g.setColor(Color.black);
