@@ -27,4 +27,30 @@ public class Scoop {
 		g.fillOval(x, y, 100, 100);
 		g.setColor(Color.black);
 	}
+	
+	public Scoop(int xPos, int yPos, String topping, Color C, Graphics g) {
+		price = 1.0;
+		x = xPos;
+		y = yPos;
+		color = C;
+		graphics = g;
+		g.setColor(color);
+		g.fillOval(x, y, 100, 100);
+		g.setColor(Color.black);
+
+		if (topping.equals("Flake")|| topping.equals("fl")) {
+			//make flake
+		}
+		if (topping.equals("Cherry")|| topping.equals("ch")) {
+			g.setColor(Color.red);
+			g.fillOval(x, y, 10, 10);
+			g.drawArc(x+5,y+10, 5, 10, 300, 60);
+		}
+		if (topping.equals("Fudge")|| topping.equals("fu")) {
+			//make fudge
+		}
+		if (topping.equals("Sprinkles") || topping.equals("sp")) {
+			//make fudge
+		}
+	}
 }
