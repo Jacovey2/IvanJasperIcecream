@@ -40,10 +40,10 @@ public class Scoop{
 		if (topping.equals("Flake")|| topping.equals("fl")) {
 			//make flake
 		}
-		if (topping.equals("Cherry")|| topping.equals("ch")) {
+		if (topping.equals("Cherry")|| topping.equals("ch")) {//makes a cherry on a scoop
 			g.setColor(Color.red);
-			g.fillOval(x+10, y+10, 10, 10);
-			g.drawArc(x+15,y+20, 5, 10, 300, 60);
+			g.fillOval(x+35, y-20, 30, 30);
+			g.drawArc(x+30,y-83, 25, 70, 300, 60);
 			g.setColor(Color.black);
 		}
 		if (topping.equals("Fudge")|| topping.equals("fu")) {
