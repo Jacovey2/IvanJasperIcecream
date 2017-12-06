@@ -6,5 +6,4 @@ public class Mango extends Scoop {
 		// TODO Auto-generated constructor stub
 
 	}
-
 }

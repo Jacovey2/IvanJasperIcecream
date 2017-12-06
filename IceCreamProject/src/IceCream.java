@@ -1,5 +1,4 @@
 import java.awt.*;
-import java.util.List;
 
 public class IceCream {
 	public int x;
@@ -27,10 +26,10 @@ public class IceCream {
 				Scoops[i] = new RockyRoad(    x, y - (i + 1) * 80, toppings[i], g);
 			price += Scoops[i].price;
 		}
-		if (receptical.toLowerCase().equals("cup"))
-			drawCup(g);
 		if (receptical.toLowerCase().equals("Cone"))
 			drawCone(g);
+		if (receptical.toLowerCase().equals("Cup"))
+			drawCup(g);
 	}
 
 	public void drawCone(Graphics g) {

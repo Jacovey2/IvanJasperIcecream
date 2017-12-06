@@ -5,5 +5,4 @@ public class CookiesNCream extends Scoop{
 		super(xPos, yPos, topping, new Color(255, 240, 220), g);
 		// TODO Auto-generated constructor stub
 	}
-
 }

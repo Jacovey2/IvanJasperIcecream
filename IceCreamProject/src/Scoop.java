@@ -18,19 +18,14 @@ public class Scoop{
 		g.fillOval(x, y, 100, 100);
 		g.setColor(Color.black);
 
-		if (topping.equals("Flake")|| topping.equals("fl")) {
-			//make flake
-		}
-		if (topping.equals("Cherry")|| topping.equals("ch")) {
-			
-		}
-		if (topping.equals("Fudge")|| topping.equals("fu")) {
+		if (topping.equals("Flake")|| topping.equals("fl"))
+			makeFlake(g);
+		if (topping.equals("Cherry")|| topping.equals("ch"))
+			makeCherry(g);
+		if (topping.equals("Fudge")|| topping.equals("fu"))
 			makeFudge(g);
-			
-		}
-		if (topping.equals("Sprinkles") || topping.equals("sp")) {
-			//make fudge
-		}
+		if (topping.equals("Sprinkles") || topping.equals("sp")) 
+			makeSprinkles(g);
 	}
 	
 	public void makeFlake (Graphics g) {
@@ -38,8 +33,8 @@ public class Scoop{
 	}
 	public void makeCherry (Graphics g) {
 		g.setColor(Color.red);
-		g.fillOval(x, y, 10, 10);
-		g.drawArc(x+5,y+10, 5, 10, 300, 60);
+		g.fillOval(x+25, y-10, 40, 40);
+		g.drawArc(x+50,y+30, 8, -100, 90, 60);
 	}
 	public void makeFudge (Graphics g) {
 		g.setColor(new Color(139, 69, 19));
