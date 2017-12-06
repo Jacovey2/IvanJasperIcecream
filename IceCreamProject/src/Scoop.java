@@ -1,6 +1,6 @@
 import java.awt.*;
 
-public class Scoop {
+public class Scoop{
 	protected double price;
 	public int x;
 	public int y;
@@ -42,8 +42,8 @@ public class Scoop {
 		}
 		if (topping.equals("Cherry")|| topping.equals("ch")) {
 			g.setColor(Color.red);
-			g.fillOval(x, y, 10, 10);
-			g.drawArc(x+5,y+10, 5, 10, 300, 60);
+			g.fillOval(x+10, y+10, 10, 10);
+			g.drawArc(x+15,y+20, 5, 10, 300, 60);
 			g.setColor(Color.black);
 		}
 		if (topping.equals("Fudge")|| topping.equals("fu")) {
