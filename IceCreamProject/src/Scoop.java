@@ -58,9 +58,9 @@ public class Scoop{
 		price = 1.0;
 		x = xPos;
 		y = yPos;
-		color = new Color(255, 240, 220);
+		color = C;
 		graphics = g;
-		g.setColor(new Color(255, 240, 220));
+		g.setColor(color);
 		g.fillOval(x, y, 100, 100);
 		g.setColor(Color.black);
 
