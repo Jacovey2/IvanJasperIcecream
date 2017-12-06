@@ -51,11 +51,8 @@ public class Scoop{
 			g.setColor(new Color(139, 69, 19));
 			g.fillOval(x+15, y, 75, 25);
 			g.fillOval(x+10, y+10, 25, 40);
-			//g.fillOval(x+20, y+10, 25, 40);
 			g.fillOval(x+30, y+10, 25, 40);
-			//g.fillOval(x+40, y+10, 25, 40);
 			g.fillOval(x+50, y+10, 25, 40);
-			//g.fillOval(x+60, y+10, 25, 40);
 			g.fillOval(x+70, y+10, 25, 40);
 			g.setColor(Color.black);
 		}
@@ -85,7 +82,7 @@ public class Scoop{
 		if (topping.equals("Fudge")|| topping.equals("fu")) {
 			//make fudge
 			g.setColor(new Color(139, 69, 19));
-			g.fillOval(x+15, y, 75, 25);
+			g.fillOval(x+17, y, 70, 25);
 			g.fillOval(x+10, y+10, 25, 40);
 			g.fillOval(x+30, y+10, 25, 40);
 			g.fillOval(x+50, y+10, 25, 40);
