@@ -29,6 +29,7 @@ public class GUI extends Applet{
 			System.out.println("What Topping?");
 			toppings[i] = scan.next();
 		}
+		scan.close();
 	}
 	
 	public void paint(Graphics g) {

@@ -12,7 +12,7 @@ public class IceCream {
 		x = xPos;
 		y = yPos;
 		Scoops = new Scoop[types.length];
-
+		
 		for (int i = 0; i < types.length; i++) {
 			if (types[i].equals("Vanilla") || types[i].equals("va"))
 				Scoops[i] = new Scoop(x, y - (i + 1) * 80,toppings[i], g);
