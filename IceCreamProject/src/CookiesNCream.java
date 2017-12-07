@@ -5,8 +5,9 @@ public class CookiesNCream extends Scoop{
 	public CookiesNCream(int xPos, int yPos, String topping, Graphics g) {
 		super(xPos, yPos, topping, new Color(255, 240, 220), g);
 		Random r = new Random();
-		int numChuncks = r.nextInt(10)+5;
+		int numChuncks = r.nextInt(11)+10;
 		int numCompleted=0;
+		g.setColor(new Color(102,52,0));
 		while (numCompleted<numChuncks) {
 			int x = r.nextInt(100)+xPos;
 			int y = r.nextInt(100)+yPos;
@@ -20,7 +21,7 @@ public class CookiesNCream extends Scoop{
 				numCompleted++;
 			}
 		}
-		
+		g.setColor(Color.BLACK);
 		
 	}
 }
