@@ -59,6 +59,7 @@ public class Scoop{
 				numCompleted++;
 			}
 		}
+		g.setColor(Color.black);
 	}
 	private Color RandomColor() {
 		Random r = new Random();
