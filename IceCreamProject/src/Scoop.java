@@ -33,8 +33,8 @@ public class Scoop{
 	}
 	public void makeCherry (Graphics g) {
 		g.setColor(Color.red);
-		g.fillOval(x+25, y-10, 40, 40);
-		g.drawArc(x+50,y-50, 20, 100, 90, 100);
+		g.fillOval(x+25, y-10, 30, 30);
+		g.drawArc(x+40,y-50, 20, 100, 90, 100);
 	}
 	public void makeFudge (Graphics g) {
 		g.setColor(new Color(139, 69, 19));
