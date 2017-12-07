@@ -1,4 +1,5 @@
 import java.awt.*;
+import java.util.Random;
 
 public class Scoop{
 	protected double price;
@@ -47,5 +48,9 @@ public class Scoop{
 	}
 	public void makeSprinkles (Graphics g) {
 		
+	}
+	private Color RandomColor() {
+		Random r = new Random();
+		return new Color(r.nextInt(254),r.nextInt(254),r.nextInt(254));
 	}
 }
