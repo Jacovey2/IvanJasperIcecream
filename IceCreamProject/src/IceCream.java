@@ -55,6 +55,7 @@ public class IceCream {
 		p.addPoint(x + 25, y + 100);
 		g.setColor(new Color(236, 240, 185));
 		g.fillPolygon(p);
+		g.drawArc(x-20, y+150, 100, 20, 20, 160);
 		g.setColor(Color.black);
 	}
 
