@@ -12,6 +12,7 @@ public class GUI extends Applet{
 	public void init() {
 		Scanner scan= new Scanner(System.in);
 		setSize(new Dimension(1000,900));
+		setBackground(Color.BLACK);
 		
 		//taking in values to make ice cream
 		System.out.println("Cup or Cone?");

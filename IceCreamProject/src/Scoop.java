@@ -58,10 +58,7 @@ public class Scoop{
 				g.drawLine(xpos, ypos, xpos+(r.nextInt(11)-5), ypos+(r.nextInt(11)-5));
 				numCompleted++;
 			}
-			
 		}
-		
-		
 	}
 	private Color RandomColor() {
 		Random r = new Random();
