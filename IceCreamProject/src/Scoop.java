@@ -47,6 +47,20 @@ public class Scoop{
 		g.setColor(Color.black);
 	}
 	public void makeSprinkles (Graphics g) {
+		Random r = new Random();
+		int numSprinkles = r.nextInt(100)+100;
+		int numCompleted = 0;
+		while(numCompleted != numSprinkles) {
+			g.setColor(RandomColor());
+			int xpos = r.nextInt(100)+x;
+			int ypos = r.nextInt(100)+y;
+			if(Math.sqrt(Math.pow(xpos-(x+50),2) + Math.pow(ypos-(y+50),2))<50.0) {
+				g.drawLine(xpos, ypos, xpos+(r.nextInt(11)-5), ypos+(r.nextInt(11)-5));
+				numCompleted++;
+			}
+			
+		}
+		
 		
 	}
 	private Color RandomColor() {
