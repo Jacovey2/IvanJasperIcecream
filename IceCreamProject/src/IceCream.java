@@ -26,9 +26,9 @@ public class IceCream {
 				Scoops[i] = new RockyRoad(    x, y - (i + 1) * 80, toppings[i], g);
 			price += Scoops[i].price;
 		}
-		if (receptical.toLowerCase().equals("Cone"))
+		if (receptical.toLowerCase().equals("cone"))
 			drawCone(g);
-		if (receptical.toLowerCase().equals("Cup"))
+		if (receptical.toLowerCase().equals("cup"))
 			drawCup(g);
 	}
 
