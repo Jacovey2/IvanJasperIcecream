@@ -12,19 +12,24 @@ public class IceCream {
 		Scoops = new Scoop[types.length];
 
 		for (int i = 0; i < types.length; i++) {
+			boolean failed=false;
+			int scoopX=x;
+			int scoopY=y - (i + 1) * 80;
 			if (types[i].equals("Vanilla") || types[i].equals("va"))
-				Scoops[i] = new Scoop(        x, y - (i + 1) * 80, toppings[i], new Color(255, 240, 220), g);
-			if (types[i].equals("ChocolateChip") || types[i].equals("cc"))
-				Scoops[i] = new ChocolateChip(x, y - (i + 1) * 80, toppings[i], g);
-			if (types[i].equals("Mango") || types[i].equals("ma"))
-				Scoops[i] = new Mango(        x, y - (i + 1) * 80, toppings[i], g);
-			if (types[i].equals("Strawberry") || types[i].equals("st"))
-				Scoops[i] = new Strawberry(   x, y - (i + 1) * 80, toppings[i], g);
-			if (types[i].equals("CookiesNCream") || types[i].equals("cnc"))
-				Scoops[i] = new CookiesNCream(x, y - (i + 1) * 80, toppings[i], g);
-			if (types[i].equals("RockyRoad") || types[i].equals("rr"))
-				Scoops[i] = new RockyRoad(    x, y - (i + 1) * 80, toppings[i], g);
-			price += Scoops[i].price;
+				Scoops[i] = new Scoop(        scoopX, scoopY, toppings[i], new Color(255, 240, 220), g);
+			else if (types[i].equals("ChocolateChip") || types[i].equals("cc"))
+				Scoops[i] = new ChocolateChip(scoopX, scoopY, toppings[i], g);
+			else if (types[i].equals("Mango") || types[i].equals("ma"))
+				Scoops[i] = new Mango(        scoopX, scoopY, toppings[i], g);
+			else if (types[i].equals("Strawberry") || types[i].equals("st"))
+				Scoops[i] = new Strawberry(   scoopX, scoopY, toppings[i], g);
+			else if (types[i].equals("CookiesNCream") || types[i].equals("cnc"))
+				Scoops[i] = new CookiesNCream(scoopX, scoopY, toppings[i], g);
+			else if (types[i].equals("RockyRoad") || types[i].equals("rr"))
+				Scoops[i] = new RockyRoad(    scoopX, scoopY, toppings[i], g);
+			else failed=true;
+			if (!failed)
+				price += Scoops[i].price;
 		}
 		if (receptical.toLowerCase().equals("cone"))
 			drawCone(g);

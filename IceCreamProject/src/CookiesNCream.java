@@ -13,7 +13,11 @@ public class CookiesNCream extends Scoop{
 			if (Math.sqrt(Math.pow(x-(xPos+50), 2)+Math.pow(y-(yPos+50), 2))<50.0) {
 				Polygon p= new Polygon();
 				p.addPoint(x-3, y+r.nextInt(5)-2);
-				p.addPoint(x+3, y);
+				p.addPoint(x+3, y+r.nextInt(5)-2);
+				p.addPoint(x+3, y+2+r.nextInt(5)-2);
+				p.addPoint(x-3, y+2+r.nextInt(5)-2);
+				g.fillPolygon(p);
+				numCompleted++;
 			}
 		}
 		
