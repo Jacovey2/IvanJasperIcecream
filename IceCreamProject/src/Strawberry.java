@@ -5,22 +5,31 @@ public class Strawberry extends Scoop{
 	public Strawberry(int xPos, int yPos, String topping, Graphics g) {
 		super(xPos, yPos, topping, new Color(233,155,155), g);
 		Random r = new Random();
-		int numChuncks = r.nextInt(6)+10;
+		int numChuncks = r.nextInt(6)+4;
 		int numCompleted=0;
 		g.setColor(new Color(156,0,76));
 		while (numCompleted<numChuncks) {
 			int x = r.nextInt(100)+xPos;
 			int y = r.nextInt(100)+yPos;
-			if (Math.sqrt(Math.pow(x-(xPos+50), 2)+Math.pow(y-(yPos+50), 2))<50.0 && y<yPos+70) {
+			if (Math.sqrt(Math.pow(x-(xPos+50), 2)+Math.pow(y-(yPos+50), 2))<45.0 && y<yPos+70) {
 				Polygon p= new Polygon();
-				p.addPoint(x-3, y-1-r.nextInt(4));
-				p.addPoint(x+3, y-1-r.nextInt(4));
-				p.addPoint(x+3, y+1+r.nextInt(4));
-				p.addPoint(x-3, y+1+r.nextInt(4));
+				p.addPoint(x-7, y-7-r.nextInt(4));
+				p.addPoint(x+7, y-7-r.nextInt(4));
+				p.addPoint(x, y+1+r.nextInt(4));
 				g.fillPolygon(p);
 				numCompleted++;
 			}
 		}
+		Polygon n = new Polygon();
+		n.addPoint(xPos, yPos);
+		n.addPoint(xPos+30, yPos+10);
+		n.addPoint(xPos+2, yPos+50);
+		g.setColor(Color.red);
+		g.fillPolygon(n);
+		g.setColor(Color.green);
+		g.fillOval(xPos+5, yPos-10, 10, 15);
+		g.fillOval(xPos+10, yPos-10, 10, 15);
+		g.fillOval(xPos+15, yPos-5, 10, 15);
 		g.setColor(Color.BLACK);
 	}
 }
