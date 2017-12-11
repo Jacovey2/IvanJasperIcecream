@@ -17,7 +17,7 @@ public class Scoop {
 		g.setColor(color);
 		g.fillOval(x, y, 100, 100);
 		g.fillOval(x, y + 75, 25, 25);
-		g.fillOval(x +20, y + 75, 25, 25);
+		g.fillOval(x + 20, y + 75, 25, 25);
 		g.fillOval(x + 40, y + 75, 25, 25);
 		g.fillOval(x + 60, y + 75, 25, 25);
 		g.fillOval(x + 75, y + 75, 25, 25);
@@ -65,15 +65,12 @@ public class Scoop {
 		int numCompleted = 0;
 		while (numCompleted != numSprinkles) {
 			g.setColor(RandomColor());
-			
-			double angle=r.nextDouble()*2*Math.PI;
+			double angle = r.nextDouble() * 2 * Math.PI;
 			int radius = r.nextInt(50);
-			int xpos = (int) Math.round(radius*Math.cos(angle)) + x;
-			int ypos = (int) Math.round(radius*Math.sin(angle)) + y;
-			if (ypos<x+70) {
-				g.drawLine(xpos, ypos, xpos + (r.nextInt(11) - 5), ypos + (r.nextInt(11) - 5));
-				numCompleted++;
-			}
+			int xpos = x + 50 + (int) Math.round(radius * Math.cos(angle));
+			int ypos = y + 50 + (int) Math.round(radius * Math.sin(angle));
+			g.drawLine(xpos, ypos, xpos + (r.nextInt(11) - 5), ypos + (r.nextInt(11) - 5));
+			numCompleted++;
 		}
 		g.setColor(Color.black);
 	}
