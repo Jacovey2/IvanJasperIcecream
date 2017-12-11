@@ -27,6 +27,6 @@ public class RockyRoad extends Scoop{
 				numCompleted++;
 			}
 		}
-		g.setColor(Color.BLACK);
+		g.setColor(Color.black);
 	}
 }
