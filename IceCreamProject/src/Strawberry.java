@@ -27,9 +27,8 @@ public class Strawberry extends Scoop{
 		g.setColor(Color.red);
 		g.fillPolygon(n);
 		g.setColor(Color.green);
-		g.fillOval(xPos+5, yPos-10, 10, 15);
-		g.fillOval(xPos+10, yPos-10, 10, 15);
-		g.fillOval(xPos+15, yPos-5, 10, 15);
+		g.fillArc(xPos-3, yPos-15, 20, 30, 330, 110);
+		g.fillArc(xPos+16, yPos-15, 20, 30, 135, 85);
 		g.setColor(Color.BLACK);
 	}
 }
