@@ -7,7 +7,6 @@ public class Scoop {
 	public int y;
 	protected Color color;
 	protected Graphics graphics;
-	// new Color(255, 240, 220))
 
 	public Scoop(int xPos, int yPos, String topping, Color C, Graphics g) {
 		price = 1.0;
@@ -66,9 +65,12 @@ public class Scoop {
 		int numCompleted = 0;
 		while (numCompleted != numSprinkles) {
 			g.setColor(RandomColor());
-			int xpos = r.nextInt(100) + x;
-			int ypos = r.nextInt(100) + y;
-			if (Math.sqrt(Math.pow(xpos - (x + 50), 2) + Math.pow(ypos - (y + 50), 2)) < 50.0) {
+			
+			double angle=r.nextDouble()*2*Math.PI;
+			int radius = r.nextInt(50);
+			int xpos = (int) Math.round(radius*Math.cos(angle)) + x;
+			int ypos = (int) Math.round(radius*Math.sin(angle)) + y;
+			if (ypos<x+70) {
 				g.drawLine(xpos, ypos, xpos + (r.nextInt(11) - 5), ypos + (r.nextInt(11) - 5));
 				numCompleted++;
 			}
