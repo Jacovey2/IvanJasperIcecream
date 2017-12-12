@@ -3,7 +3,7 @@ import java.util.Random;
 
 public class Strawberry extends Scoop {
 	public Strawberry(int xPos, int yPos, String topping, Graphics g) {
-		super(xPos, yPos, topping, new Color(233, 155, 155), g);
+		super(xPos, yPos, new Color(233, 155, 155), g);
 		Random r = new Random();
 		int numChunks = r.nextInt(6) + 4;
 		g.setColor(Color.red);
@@ -13,7 +13,7 @@ public class Strawberry extends Scoop {
 			// angle picking
 			double angle = r.nextDouble() * 2 * Math.PI;
 			// radius picking
-			int radius = r.nextInt(50);
+			int radius = r.nextInt(40);
 			// converting from (theta, r) to (x, y)
 			int x = xPos + 50 + (int) Math.round(radius * Math.cos(angle));
 			int y = yPos + 50 + (int) Math.round(radius * Math.sin(angle));
@@ -34,5 +34,7 @@ public class Strawberry extends Scoop {
 		g.fillArc(xPos - 3, yPos - 15, 20, 30, 330, 110);
 		g.fillArc(xPos + 16, yPos - 15, 20, 30, 135, 85);
 		g.setColor(Color.BLACK);
+		
+		Topping t = new Topping(xPos,yPos,topping,g);
 	}
 }

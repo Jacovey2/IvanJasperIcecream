@@ -27,5 +27,6 @@ public class CookiesNCream extends Scoop{
 			g.fillPolygon(p);
 		}
 		g.setColor(Color.BLACK);
+		Topping t = new Topping(xPos,yPos,topping,g);
 	}
 }

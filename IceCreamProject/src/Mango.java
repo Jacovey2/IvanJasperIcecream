@@ -3,7 +3,7 @@ import java.util.Random;
 
 public class Mango extends Scoop {
 	public Mango(int xPos, int yPos, String topping, Graphics g) {
-		super(xPos, yPos, topping, new Color(233, 186, 0), g);
+		super(xPos, yPos, new Color(233, 186, 0), g);
 		Random r = new Random();
 		int numChunks = r.nextInt(5) + 5;
 		g.setColor(new Color(255, 124, 92));
@@ -22,5 +22,6 @@ public class Mango extends Scoop {
 			g.fillOval(x-cRadius, y-cRadius, cRadius, cRadius);
 		}
 		g.setColor(Color.black);
+		Topping t = new Topping(xPos,yPos,topping,g);
 	}
 }
