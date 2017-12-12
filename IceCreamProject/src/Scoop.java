@@ -39,6 +39,7 @@ public class Scoop {
 		g.fillOval(x + 75, y + 75, 25, 25);
 		g.setColor(Color.black);
 		Topping t = new Topping(x,y,topping,g);
+		price+=t.price;
 	}
 
 	private Color RandomColor() {//random color generator

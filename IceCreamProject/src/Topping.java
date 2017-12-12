@@ -4,17 +4,26 @@ import java.util.Random;
 public class Topping {
 	public int x;
 	public int y;
+	public double price;
 	public Topping(int xPos, int yPos, String type, Graphics g){
 		x=xPos;
 		y=yPos;
-		if (type.equals("Flake") || type.equals("fl"))
+		if (type.equals("Flake") || type.equals("fl")) {
 			makeFlake(g);
-		if (type.equals("Cherry") || type.equals("ch"))
+			price=0.75;
+		}
+		if (type.equals("Cherry") || type.equals("ch")) {
 			makeCherry(g);
-		if (type.equals("Fudge") || type.equals("fu"))
+			price=1;
+		}
+		if (type.equals("Fudge") || type.equals("fu")) {
 			makeFudge(g);
-		if (type.equals("Sprinkles") || type.equals("sp"))
+			price=1.25;
+		}
+		if (type.equals("Sprinkles") || type.equals("sp")) {
 			makeSprinkles(g);
+			price=0.50;
+		}
 	}
 	public void makeFlake(Graphics g) {
 		int[] Xpos = { x + 95, x + 110, x + 80, x + 65 };
