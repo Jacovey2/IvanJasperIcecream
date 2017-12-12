@@ -40,13 +40,13 @@ public class IceCream {
 	public void drawCone(Graphics g) {
 		g.setColor(Color.cyan);//creates part of holder for cone
 		g.fillRect(x+45, y+150, 10, 40 );
-		Polygon p = new Polygon();
+		Polygon p = new Polygon();//create physical cone
 		p.addPoint(x, y+15);
 		p.addPoint(x + 100, y+15);
 		p.addPoint(x + 50, y + 165);
 		g.setColor(new Color(90, 50, 0));
 		g.fillPolygon(p);
-		g.setColor(Color.cyan);
+		g.setColor(Color.cyan); //creates rest of holder for cone
 		g.fillArc(x+5, y+180, 100, 20, 20, 160);
 		g.fillRect(x+15, y+75, 23, 7 );
 		g.fillRect(x+62, y+75, 23, 7 );
@@ -54,14 +54,14 @@ public class IceCream {
 	}
 
 	public void drawCup(Graphics g) {
-		Polygon p = new Polygon();
+		Polygon p = new Polygon();//draws cup
 		p.addPoint(x, y+15);
 		p.addPoint(x + 100, y+15);
 		p.addPoint(x + 75, y + 115);
 		p.addPoint(x + 25, y + 115);
 		g.setColor(new Color(236, 240, 185));
 		g.fillPolygon(p);
-		g.setColor(Color.cyan);
+		g.setColor(Color.cyan);//creates the holder for the cup
 		g.fillArc(x+5, y+165, 100, 20, 20, 160);
 		g.fillRect(x+45, y+115, 10, 60 );
 		g.fillRect(x+15, y+75, 23, 7 );

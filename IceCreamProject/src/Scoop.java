@@ -9,7 +9,7 @@ public class Scoop {
 	protected Graphics graphics;
 
 	public Scoop(int xPos, int yPos, Color C, Graphics g) {
-		price = 1.0;
+		price = 3.5;
 		x = xPos;
 		y = yPos;
 		color = C;
@@ -25,7 +25,7 @@ public class Scoop {
 	}
 	
 	public Scoop(int xPos, int yPos, String topping, Color C, Graphics g) {
-		price = 1.0;
+		price = 2.0;
 		x = xPos;
 		y = yPos;
 		color = C;
