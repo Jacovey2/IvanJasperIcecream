@@ -34,7 +34,7 @@ public class GUI extends Applet {
 	}
 
 	public void paint(Graphics g) {
-		IceCream c = new IceCream(200, 500, receptical, types, toppings, g);
+		IceCream c = new IceCream(200, 600, receptical, types, toppings, g);
 		System.out.println("Total: " + c.getPrice());
 	}
 
