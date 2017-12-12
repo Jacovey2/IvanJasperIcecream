@@ -38,7 +38,7 @@ public class IceCream {
 	}
 
 	public void drawCone(Graphics g) {
-		g.setColor(Color.cyan);
+		g.setColor(Color.cyan);//creates part of holder for cone
 		g.fillRect(x+45, y+150, 10, 40 );
 		Polygon p = new Polygon();
 		p.addPoint(x, y+15);

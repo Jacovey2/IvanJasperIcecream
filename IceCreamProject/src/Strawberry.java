@@ -24,7 +24,7 @@ public class Strawberry extends Scoop {
 			p.addPoint(x, y + 1 + r.nextInt(4));
 			g.fillPolygon(p);
 		}
-		Polygon n = new Polygon();
+		Polygon n = new Polygon(); //creates a strawberry on the side of the strawberry scoop
 		n.addPoint(xPos, yPos);
 		n.addPoint(xPos + 30, yPos + 10);
 		n.addPoint(xPos + 2, yPos + 50);
