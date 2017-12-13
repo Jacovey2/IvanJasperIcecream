@@ -21,11 +21,11 @@ public class Mango extends Scoop {
 			// radius picking
 			int radius = r.nextInt(40);
 			// converting from (theta, r) to (x, y)
-			x += 50 + (int) Math.round(radius * Math.cos(angle));
-			y += 50 + (int) Math.round(radius * Math.sin(angle));
-			//Make a circle at (x,y)
+			int cx = x+50 + (int) Math.round(radius * Math.cos(angle));
+			int cy = y+50 + (int) Math.round(radius * Math.sin(angle));
+			//Make a circle at (cx,cy)
 			int cRadius= r.nextInt(5)+10;
-			g.fillOval(x-cRadius, y-cRadius, cRadius, cRadius);
+			g.fillOval(cx-cRadius, cy-cRadius, cRadius, cRadius);
 		}
 	}
 }

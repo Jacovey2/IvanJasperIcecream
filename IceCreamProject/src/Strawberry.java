@@ -22,13 +22,13 @@ public class Strawberry extends Scoop {
 			// radius picking
 			int radius = r.nextInt(40);
 			// converting from (theta, r) to (x, y)
-			x += 50 + (int) Math.round(radius * Math.cos(angle));
-			y += 50 + (int) Math.round(radius * Math.sin(angle));
-			//Make semi-random polygon at (x,y)
+			int cx = x+50 + (int) Math.round(radius * Math.cos(angle));
+			int cy = y+50 + (int) Math.round(radius * Math.sin(angle));
+			//Make semi-random polygon at (cx,cy)
 			Polygon p = new Polygon();
-			p.addPoint(x - 7, y - 7 - r.nextInt(4));
-			p.addPoint(x + 7, y - 7 - r.nextInt(4));
-			p.addPoint(x, y + 1 + r.nextInt(4));
+			p.addPoint(cx - 7, cy - 7 - r.nextInt(4));
+			p.addPoint(cx + 7, cy - 7 - r.nextInt(4));
+			p.addPoint(cx, cy + 1 + r.nextInt(4));
 			g.fillPolygon(p);
 		}
 	}

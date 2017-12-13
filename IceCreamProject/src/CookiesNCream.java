@@ -20,14 +20,14 @@ public class CookiesNCream extends Scoop{
 			//radius picking
 			int radius = r.nextInt(50);
 			//converting from (theta, r) to (x, y)
-			x += 50 + (int) Math.round(radius * Math.cos(angle));
-			y += 50 + (int) Math.round(radius * Math.sin(angle));
-			//Making a semi-random polygon at (x,y)
+			int cx = x+50 + (int) Math.round(radius * Math.cos(angle));
+			int cy = y+50 + (int) Math.round(radius * Math.sin(angle));
+			//Making a semi-random polygon at (cx,cy)
 			Polygon p= new Polygon();
-			p.addPoint(x-3, y-1-r.nextInt(4));
-			p.addPoint(x+3, y-1-r.nextInt(4));
-			p.addPoint(x+3, y+1+r.nextInt(4));
-			p.addPoint(x-3, y+1+r.nextInt(4));
+			p.addPoint(cx-3, cy-1-r.nextInt(4));
+			p.addPoint(cx+3, cy-1-r.nextInt(4));
+			p.addPoint(cx+3, cy+1+r.nextInt(4));
+			p.addPoint(cx-3, cy+1+r.nextInt(4));
 			g.fillPolygon(p);
 		}
 	}
