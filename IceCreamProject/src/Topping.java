@@ -25,7 +25,7 @@ public class Topping {
 			price=0.50;
 		}
 	}
-	public void makeFlake(Graphics g) {
+	private void makeFlake(Graphics g) {
 		int[] Xpos = { x + 95, x + 110, x + 80, x + 65 };
 		int[] Ypos = { y - 25, y - 25, y + 30, y + 30 };
 		g.setColor(new Color(139, 69, 19));
@@ -36,13 +36,13 @@ public class Topping {
 		g.drawLine(x + 110, y - 25, x + 75, y + 30);
 	}
 
-	public void makeCherry(Graphics g) {
+	private void makeCherry(Graphics g) {
 		g.setColor(Color.red);
 		g.fillOval(x + 25, y - 10, 30, 30);
 		g.drawArc(x + 40, y - 50, 20, 100, 90, 100);
 	}
 
-	public void makeFudge(Graphics g) {
+	private void makeFudge(Graphics g) {
 		g.setColor(new Color(139, 69, 19));
 		g.fillOval(x + 17, y, 70, 25);
 		g.fillOval(x + 10, y + 10, 25, 40);
@@ -52,12 +52,12 @@ public class Topping {
 		g.setColor(Color.black);
 	}
 
-	public void makeSprinkles(Graphics g) {
+	private void makeSprinkles(Graphics g) {
 		Random r = new Random();
 		int numSprinkles = r.nextInt(100) + 100;
 		int numCompleted = 0;
 		while (numCompleted != numSprinkles) {
-			g.setColor(RandomColor());
+			g.setColor(randomColor());
 			double angle = r.nextDouble() * 2 * Math.PI;
 			int radius = r.nextInt(50);
 			int xpos = x + 50 + (int) Math.round(radius * Math.cos(angle));
@@ -68,7 +68,7 @@ public class Topping {
 		g.setColor(Color.black);
 	}
 	
-	private Color RandomColor() {
+	private Color randomColor() {
 		Random r = new Random();
 		return new Color(r.nextInt(254), r.nextInt(254), r.nextInt(254));
 	}

@@ -41,9 +41,4 @@ public class Scoop {
 		Topping t = new Topping(x,y,topping,g);
 		price+=t.price;
 	}
-
-	private Color RandomColor() {//random color generator
-		Random r = new Random();
-		return new Color(r.nextInt(254), r.nextInt(254), r.nextInt(254));
-	}
 }

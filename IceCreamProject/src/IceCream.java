@@ -6,7 +6,7 @@ public class IceCream {
 	private double price;
 	public Scoop[] Scoops;
 
-	public IceCream(int xPos, int yPos, String receptical, String[] types, String[] toppings, Graphics g) {
+	public IceCream(int xPos, int yPos, String receptacle, String[] types, String[] toppings, Graphics g) {
 		x = xPos;
 		y = yPos;
 		Scoops = new Scoop[types.length];
@@ -31,13 +31,13 @@ public class IceCream {
 			if (!failed)
 				price += Scoops[i].price;
 		}
-		if (receptical.toLowerCase().equals("cone"))
+		if (receptacle.toLowerCase().equals("cone"))
 			drawCone(g);
-		if (receptical.toLowerCase().equals("cup"))
+		if (receptacle.toLowerCase().equals("cup"))
 			drawCup(g);
 	}
 
-	public void drawCone(Graphics g) {
+	private void drawCone(Graphics g) {
 		g.setColor(Color.cyan);//creates part of holder for cone
 		g.fillRect(x+45, y+150, 10, 40 );
 		Polygon p = new Polygon();//create physical cone
@@ -53,7 +53,7 @@ public class IceCream {
 		g.setColor(Color.black);
 	}
 
-	public void drawCup(Graphics g) {
+	private void drawCup(Graphics g) {
 		Polygon p = new Polygon();//draws cup
 		p.addPoint(x, y+15);
 		p.addPoint(x + 100, y+15);
